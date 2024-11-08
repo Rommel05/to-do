@@ -2,6 +2,7 @@ window.onload = () => {
     addTarea();
     removeTarea();
     seleccionarTodo();
+    setInterval(reloj, 1000);
 }
 
 function addTarea()  {
@@ -106,4 +107,33 @@ function seleccionarTodo() {
     })
 }
 
+function reloj() {
+    let fecha = new Date();
+    let horas = fecha.getHours();
+    let minutos = fecha.getMinutes();
+    let segundos = fecha.getSeconds();
 
+    if (horas < 10) {
+        horas = "0" + horas;
+    }
+
+    if (minutos < 10) {
+        minutos = "0" + minutos;
+    }
+
+    if (segundos < 10) {
+        segundos = "0" + segundos;
+    }
+
+    let divReloj = document.getElementById("reloj");
+    let contenido = document.createTextNode(horas + ":" + minutos + ":" + segundos);
+    let p = divReloj.getElementsByTagName("p");
+    
+    if (p.length == 0) {
+        p = document.createElement("p");
+        p.appendChild(contenido);
+        divReloj.appendChild(p);
+    } else {
+        divReloj.firstElementChild.textContent = horas + ":" + minutos + ":" + segundos;
+    }
+}
