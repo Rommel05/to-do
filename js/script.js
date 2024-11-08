@@ -36,35 +36,6 @@ function addTarea()  {
     })
 } 
 
-/*function removeTarea() {
-    let remove = document.getElementById("remove");
-    let inputTarea = document.getElementById("tarea");
-
-    remove.addEventListener("click", () => {
-        let confirmar = confirm("¿Estás seguro que quieres eliminar la tarea?")
-        if (confirmar) {
-            let form = document.getElementById("form");
-
-            let divsTareas = form.getElementsByTagName("div");
-            if (divsTareas.length == 0) {
-                for (let i = divsTareas.length - 1; i >= 0; i--) {
-
-                    let inputs = divsTareas[i].getElementsByTagName("input");
-    
-                    for (let j = inputs.length - 1; j >= 0; j--) {
-                        if (inputs[j].checked) {
-                            form.removeChild(divsTareas[i]);
-                            inputTarea.focus();
-                        }
-                    }
-                }
-            } else {
-                alert("No hay tareas para eliminar")
-            }
-        }
-    })
-}*/
-
 function removeTarea() {
     let remove = document.getElementById("remove");
     let inputTarea = document.getElementById("tarea");
