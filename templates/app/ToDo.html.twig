@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ToDo{% endblock %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+{% block script %}
+    <script src="js/script.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="main-layout">
+        <header id="header1">
+            <h1>Tus tareas</h1>
+        </header>
+        <main>
+            <form method="get" id="form">
+                <input type="text" name="tarea" id="tarea">
+                <input type="button" name="add" id="add" value="Añadir tarea">
+                <input type="button" name="remove" id="remove" value="Eliminar tarea">
+                <input type="button" name="seleccionarTodas" id="seleccionarTodas" value="Seleccionar todas las tareas">
+            </form>
+        </main>
+
+        <div id="reloj">
+
+        </div>
+    </div>
+{% endblock %}
