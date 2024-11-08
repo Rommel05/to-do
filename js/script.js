@@ -38,10 +38,16 @@ function removeTarea() {
         let form = document.getElementById("form");
 
         let divsTareas = form.getElementsByTagName("div");
-        for (let i = 0; i < divsTareas.length; i++) {
+        for (let i = divsTareas.length - 1; i >= 0; i--) {
 
             let inputs = divsTareas[i].getElementsByTagName("input");
-            for (let j = 0; j < inputs.length; j++) {
+            /*for (let j = 0; j < inputs.length; j++) {
+                if (inputs[j].checked) {
+                    form.removeChild(divsTareas[i]);
+                }
+            }*/
+
+            for (let j = inputs.length - 1; j >= 0; j--) {
                 if (inputs[j].checked) {
                     form.removeChild(divsTareas[i]);
                 }
