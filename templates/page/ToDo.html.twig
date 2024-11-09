@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO</title>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/style-ToDo.css">
-</head>
-<body>
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href={{ asset('css/style-ToDo.css') }}>
+{% endblock %}
+{% block javascripts %}
+    <script src={{ asset('js/script.js') }}></script>
+{% endblock %}
+
+{% block body %}
     <div id="main-layout">
         <header id="header1">
             <h1>Tus tareas</h1>
@@ -22,8 +23,7 @@
         </main>
 
         <div id="reloj">
-            
+
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
