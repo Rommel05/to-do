@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO</title>
     <script src="js/script.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/calendar-es.js"></script>
+    <script src="js/calendar-setup.js"></script>
+    <link rel="stylesheet" href="css/calendar-blue.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,6 +19,10 @@
         <main>
             <form method="get" id="form">
                 <input type="text" name="tarea" id="tarea">
+                <div id="contenedor-fecha">
+                    <input type="text" name="date" id="fecha" readonly="readonly">
+                    <img src="img/calendario.png" id="selector" alt="icono calendario">
+                </div>
                 <input type="button" name="add" id="add" value="Añadir tarea">
                 <input type="button" name="remove" id="remove" value="Eliminar tarea">
                 <input type="button" name="seleccionarTodas" id="seleccionarTodas" value="Seleccionar todas las tareas">

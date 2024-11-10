@@ -110,6 +110,31 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+#contenedor-fecha {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#fecha {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid rgb(138, 135, 135);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    outline: none;
+}
+
+#selector {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 10px; 
+    cursor: pointer;
+}
+
 @media (max-width: 500px) {
     #main-layout {
         padding: 15px;

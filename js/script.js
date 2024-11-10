@@ -3,6 +3,7 @@ window.onload = () => {
     removeTarea();
     seleccionarTodo();
     setInterval(reloj, 1000);
+    calendar();
 }
 
 function addTarea()  {
@@ -13,6 +14,9 @@ function addTarea()  {
         let tarea = document.getElementById("tarea");
         let tareaText = tarea.value;
 
+        let fecha = document.getElementById("fecha");
+        let fechaContent = fecha.value;
+
         if (tareaText.trim() != "") {
             let divTarea = document.createElement("div");
 
@@ -20,7 +24,7 @@ function addTarea()  {
             checkbox.setAttribute("type", "checkbox");
 
             let label = document.createElement("label");
-            let contentLabel = document.createTextNode(tareaText);
+            let contentLabel = document.createTextNode(tareaText + " - " + fechaContent);
             label.appendChild(contentLabel);
 
             divTarea.appendChild(checkbox);
@@ -107,4 +111,12 @@ function reloj() {
     } else {
         divReloj.firstElementChild.textContent = horas + ":" + minutos + ":" + segundos;
     }
+}
+
+function calendar() {
+    Calendar.setup({
+        inputField: "fecha",   
+        ifFormat: "%Y/%m/%d",      
+        button: "selector"        
+    });
 }
