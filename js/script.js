@@ -17,7 +17,7 @@ function addTarea()  {
         let fecha = document.getElementById("fecha");
         let fechaContent = fecha.value;
 
-        if (tareaText.trim() != "") {
+        if (tareaText.trim() != "" && fechaContent.trim() != "") {
             let divTarea = document.createElement("div");
 
             let checkbox = document.createElement("input");
@@ -34,7 +34,7 @@ function addTarea()  {
             form.reset();
             tarea.focus();
         } else {
-            alert("No puedes añadir una tarea vacia");
+            alert("No puedes dejar campos vacios");
             tarea.focus();
         }
     })
