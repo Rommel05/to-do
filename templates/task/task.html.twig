@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %} Task {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/style-task.css">
+{% endblock %}
+
+{% block body %}
+    <header id="header1">
+        <h1>Tarea</h1>
+    </header>
+    {{ form(form) }}
+
+
+{% endblock %}
