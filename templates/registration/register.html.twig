@@ -21,7 +21,8 @@
                 label: 'Password'
             }) }}
             <div id="checkbox-container">
-                {{ form_row(registrationForm.agreeTerms) }}
+                {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'checkbox'}}) }}
+                {{ form_label(registrationForm.agreeTerms, 'Acepto los términos y condiciones', {'attr': {'class': 'label'}}) }}
             </div>
 
             <button type="submit" class="btn">Register</button>

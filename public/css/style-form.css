@@ -81,8 +81,18 @@ button[type="submit"]:hover {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 #checkbox-container label {
     margin-left: 10px;
+}
+
+
+#checkbox-container label {
+    margin-left: 10px;
+}
+
+#checkbox-container input {
+    margin-right: 10px;
 }
