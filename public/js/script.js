@@ -8,12 +8,12 @@ window.onload = () => {
 function addTarea()  {
     let add = document.getElementById("add");
     add.addEventListener("click", () => {
-        let form = document.getElementById("form");
+        /*let form = document.getElementById("form");
 
         let tarea = document.getElementById("tarea");
         let tareaText = tarea.value;
 
-        if (tareaText.trim() != "") {
+        if (tareaText.trim() !== "") {
             let divTarea = document.createElement("div");
 
             let checkbox = document.createElement("input");
@@ -32,8 +32,12 @@ function addTarea()  {
         } else {
             alert("No puedes añadir una tarea vacia");
             tarea.focus();
-        }
+        }*/
+
+        window.location.assign("/task")
     })
+
+
 } 
 
 function removeTarea() {
