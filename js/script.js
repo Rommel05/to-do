@@ -19,6 +19,7 @@ function addTarea()  {
 
         if (tareaText.trim() != "" && fechaContent.trim() != "") {
             let divTarea = document.createElement("div");
+            divTarea.setAttribute("class", "divTarea");
 
             let checkbox = document.createElement("input");
             checkbox.setAttribute("type", "checkbox");
@@ -71,7 +72,7 @@ function seleccionarTodo() {
     let seleccionTodas = document.getElementById("seleccionarTodas");
     seleccionTodas.addEventListener("click", () => {
         let form = document.getElementById("form");
-        let divsTareas = form.getElementsByTagName("div");
+        let divsTareas = form.getElementsByClassName("divTarea");
         
         for (let i = 0; i < divsTareas.length; i++) {
             let inputs = divsTareas[i].getElementsByTagName("input");
