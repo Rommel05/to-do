@@ -4,6 +4,7 @@ window.onload = () => {
     seleccionarTodo();
     setInterval(reloj, 1000);
     calendar();
+    changeTheme();
 }
 
 function addTarea()  {
@@ -120,4 +121,66 @@ function calendar() {
         ifFormat: "%Y/%m/%d",      
         button: "selector"        
     });
+}
+
+function changeTheme() {
+    let change = document.getElementById("cambiarTema");
+    change.addEventListener("click", () => {
+        let theme = change.getAttribute("src");
+        if (theme == "img/moon.png") {
+            change.setAttribute("src", "img/light.png")
+
+            document.body.style.backgroundColor = "#504e4e";
+            document.body.style.color = "#f4f4f4";
+            document.getElementById("main-layout").style.backgroundColor = "#333333";
+            document.getElementById("main-layout").style.borderColor = "#555";
+
+            let botones = document.querySelectorAll("input[type='button']");
+            
+            for (let i = 0; i < botones.length; i++) {
+                botones[i].style.backgroundColor = "#444";
+                botones[i].style.color  = "#f4f4f4";
+
+                botones[i].addEventListener("mouseover", ocuro)
+                botones[i].addEventListener("mouseout", oscuroOut)
+
+
+            }
+
+            document.getElementById("reloj").style.backgroundColor = "#222";
+            document.getElementById("reloj").style.color = "#fff";
+
+
+
+        } else {
+            change.setAttribute("src", "img/moon.png");
+
+            document.body.style.backgroundColor = "";
+            document.body.style.color = "";
+
+            document.getElementById("main-layout").style.backgroundColor = "";
+            document.getElementById("main-layout").style.borderColor = "";
+
+            let botones = document.querySelectorAll("input[type='button']");
+            
+            for (let i = 0; i < botones.length; i++) {
+                botones[i].style.backgroundColor = "";
+                botones[i].style.color  = "";
+                botones[i].removeEventListener("mouseover", ocuro)
+                botones[i].removeEventListener("mouseout", oscuroOut)
+
+            }
+
+            document.getElementById("reloj").style.backgroundColor = "";
+            document.getElementById("reloj").style.color = "";
+        }
+    })
+}
+
+function ocuro(event) {
+    event.target.style.backgroundColor = "#555";
+}
+
+function oscuroOut(event) {
+    event.target.style.backgroundColor = "#444";
 }

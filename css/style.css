@@ -135,6 +135,16 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+#cambiarTema {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    z-index: 9999;
+}
+
 @media (max-width: 500px) {
     #main-layout {
         padding: 15px;
