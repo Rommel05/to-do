@@ -48,7 +48,7 @@ function removeTarea() {
     remove.addEventListener("click", () => {
         let form = document.getElementById("form");
 
-        let divsTareas = form.getElementsByTagName("div");
+        let divsTareas = form.getElementsByClassName("divTarea");
         if (divsTareas.length != 0) {
             for (let i = divsTareas.length - 1; i >= 0; i--) {
 
