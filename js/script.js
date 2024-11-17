@@ -35,7 +35,7 @@ function addTarea()  {
             form.reset();
             tarea.focus();
         } else {
-            alert("No puedes dejar campos vacios");
+            alert("You cannot leave empty fields");
             tarea.focus();
         }
     })
@@ -62,7 +62,7 @@ function removeTarea() {
                 }
             }
         } else {
-            alert("No hay tareas para eliminar");
+            alert("There are no tasks to delete");
             inputTarea.focus();
         }
     })
