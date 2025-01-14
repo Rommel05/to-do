@@ -11,8 +11,13 @@ function addTarea() {
         let date = $('#fecha').val();
 
         if (task.trim() != '' && date.trim() != '') {
-            $('#form').append('<div class="divTarea"></div>');
-            $('.divTarea').append('<input type="checkbox">' + '<label>'+ task + ' - ' + date + '</label>');
+
+            let div = $('<div class="divTarea"></div>');
+
+            div.append('<input type="checkbox">' + '<label>'+ task + ' - ' + date + '</label>');
+
+            $('#form').append(div)
+
 
             $('#tarea').val('');
             $('#fecha').val('');
@@ -32,7 +37,7 @@ function fecha() {
           buttonImage: "img/calendario.png",
           buttonImageOnly: true,
           buttonText: "Select date",
-          dateFormat: "yy-mm-dd"
+          dateFormat: "yy-mm-dd", 
         });
     } );
 }
