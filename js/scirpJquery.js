@@ -6,6 +6,7 @@ $(document).ready(function () {
     setInterval(time, 1000);
     changeTheme();
     toolbox();
+    tasks();
 });
 
 function addTarea() {
@@ -136,3 +137,20 @@ function toolbox() {
         arrow: true,
     })
 }
+
+/*function tasks() { 
+    document.getElementById('task_list').addEventListener('click', function () {
+        var xhr = new XMLHttpRequest(); 
+
+        xhr.open('GET', 'php/conn.php', true);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                
+                document.getElementById('tasks').innerHTML = xhr.responseText;
+            }
+        };
+
+        xhr.send();
+    });
+}*/
