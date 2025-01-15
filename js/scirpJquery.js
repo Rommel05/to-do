@@ -5,6 +5,7 @@ $(document).ready(function () {
     selectAll();
     setInterval(time, 1000);
     changeTheme();
+    toolbox();
 });
 
 function addTarea() {
@@ -112,4 +113,26 @@ function changeTheme() {
             $('#cambiarTema').attr('src', 'img/moon.png');
         }
     });
+}
+
+function toolbox() {
+    tippy('#add', {
+        content: 'Add task',
+        arrow: true,
+    })
+
+    tippy('#remove', {
+        content: 'Remove task',
+        arrow: true,
+    })
+
+    tippy('#seleccionarTodas', {
+        content: 'Select all tasks',
+        arrow: true,
+    })
+
+    tippy('#cambiarTema', {
+        content: 'Change theme',
+        arrow: true,
+    })
 }
