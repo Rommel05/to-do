@@ -31,7 +31,7 @@
             unset($_SESSION['filled']);
         }
         
-        var_dump($_SESSION) 
+        //var_dump($_SESSION) 
     ?>
     <div id="main-layout">
         <header id="header1">

@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        var_dump($_SESSION);
+        //var_dump($_SESSION);
     ?>
     <form method="POST" id="form" action="src/registerData.php" enctype="multipart/form-data">
         <label for="name">Name: </label>
