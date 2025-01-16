@@ -1,6 +1,6 @@
 <?php
     require_once('./php/conn.php');
-    var_dump($_SESSION);
+    //var_dump($_SESSION);
     $id = $_SESSION['user']['id'];
     echo $id;
 ?>
