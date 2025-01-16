@@ -35,7 +35,9 @@
         console.log(id);
 
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "src/showProfile.php?id=" + id);
+        //xhr.open("GET", "src/showProfile.php?id=" + id);
+        xhr.open("POST", "src/showProfile.php");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.addEventListener("readystatechange", () => {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let contenedor = document.getElementById('profile-info');
@@ -44,7 +46,7 @@
                 console.log(content);
             }
         })
-        xhr.send();
+        xhr.send('id=' + id);
     </script>
 </body>
 </html>

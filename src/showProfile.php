@@ -1,6 +1,7 @@
 <?php
     require_once('../php/conn.php');
-    $id = $_GET['id'] ?? null;
+    //$id = $_GET['id'] ?? null;
+    $id = $_POST['id'] ?? null;
 
     $sql = "SELECT * FROM users where id = '$id'";
     $query = mysqli_query($conn,$sql);
