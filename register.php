@@ -14,15 +14,21 @@
     <?php
         var_dump($_SESSION);
     ?>
-    <form method="POST" id="form" action="src/registerData.php">
-        <label for="name">Name</label>
+    <form method="POST" id="form" action="src/registerData.php" enctype="multipart/form-data">
+        <label for="name">Name: </label>
         <input type="text" name="name" id="name">
         <br>
-        <label for="email">Email</label>
+        <label for="description">Description: </label>
+        <textarea name="description" id="description"></textarea>
+        <br>
+        <label for="email">Email: </label>
         <input type="email" name="email" id="email">
         <br>
-        <label for="password">Password</label>
+        <label for="password">Password: </label>
         <input type="password" name="password" id="password">
+        <br>
+        <label for="image">Image: </label>
+        <input type="file" name="image" id="image">
         <br>
         <input type="submit" value="Login">
     </form>

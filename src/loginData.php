@@ -24,7 +24,7 @@
                 }
                 header('location:../task.php');
             } else {
-                $_SESSION['error_login'] = 'Login error';
+                $_SESSION['error_login'] = 'Incorrect password';
                 header('location:../login.php');
             }
                
