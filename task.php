@@ -1,3 +1,6 @@
+<?php
+    require_once('./php/conn.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +22,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <?php 
+        if (isset($_SESSION['errors'])) {
+            unset($_SESSION['errors']);
+        }
+
+        if (isset($_SESSION['filled'])) {
+            unset($_SESSION['filled']);
+        }
+        
+        var_dump($_SESSION) 
+    ?>
     <div id="main-layout">
         <header id="header1">
             <h1>Your tasks</h1>
@@ -33,6 +47,7 @@
                 <input type="button" name="remove" id="remove" value="Delete task">
                 <input type="button" name="seleccionarTodas" id="seleccionarTodas" value="Select all tasks">
                 <a href="profile.php"><input type="button" name="profile" id="profile", value="profile"></a>
+                <a href="src/logout.php"><input type="button" name="profile" id="profile", value="logout"></a>
             </form>
         </main>
 

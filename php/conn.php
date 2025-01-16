@@ -2,10 +2,10 @@
     session_start();
     $conn = mysqli_connect('localhost','root','sa','ToDo');
     mysqli_query($conn,"SET NAMES 'utf8'");
-    
-    $query = 'SELECT * FROM users;';
-    $users = mysqli_query($conn, $query);
 
+
+    /*$query = 'SELECT * FROM users;';
+    $users = mysqli_query($conn, $query);
     
 
     if ($users && mysqli_num_rows($users) >= 1) {
@@ -18,6 +18,6 @@
         }
     } else {
         echo 'No se ha podido realizar la consulta';
-    }
+    }*/
     
 ?>
