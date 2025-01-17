@@ -9,11 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/register-style.css">
 </head>
 <body>
     <?php
         //var_dump($_SESSION);
     ?>
+    <header>
+        <h1>Register</h1>
+    </header>
     <form method="POST" id="form" action="src/registerData.php" enctype="multipart/form-data">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
