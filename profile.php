@@ -2,7 +2,7 @@
     require_once('./php/conn.php');
     //var_dump($_SESSION);
     $id = $_SESSION['user']['id'];
-    echo $id;
+    //echo $id;
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="css/style-profile.css">
+    <link rel="stylesheet" href="css/profile-style.css">
 </head>
 <body>
     <div class="main-layout">
@@ -27,14 +27,18 @@
                     <p>User-description</p>-->
                 </div>
             </div>
+            <div class="profile-controllers">
+                <input type="button" value="Delete" id="delete">
+            </div>
         </div>
     </div>
 
     <script>
+        const xhr = new XMLHttpRequest();
+
         let id = "<?php echo $id; ?>";
         console.log(id);
 
-        let xhr = new XMLHttpRequest();
         //xhr.open("GET", "src/showProfile.php?id=" + id);
         xhr.open("POST", "src/showProfile.php");
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -47,6 +51,20 @@
             }
         })
         xhr.send('id=' + id);
+
+        let deleteP = document.getElementById("delete");
+        deleteP.addEventListener("click", () => {
+            //xhr.open("GET", "src/deleteProfile.php?id=" + id);
+            xhr.open("POST", "src/deleteProfile.php");
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.addEventListener("readystatechange", () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    location.assign("index.php")
+                }
+            })
+            xhr.send('id=' + id);
+        })
+
     </script>
 </body>
 </html>

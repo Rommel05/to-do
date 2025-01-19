@@ -1,0 +1,146 @@
+/* style-profile.css */
+
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y fuente generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estructura principal */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+/* Contenedor del perfil */
+.profile-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.profile-content:hover {
+    transform: scale(1.02);
+}
+
+/* Imagen del perfil */
+#profile-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #3b3b3b;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+/* Información del perfil */
+#profile-info h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#profile-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+    word-wrap: break-word;
+}
+
+#profile-info p:last-of-type {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Controladores del perfil */
+.profile-controllers {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.profile-controllers input[type="button"] {
+    background-color: #e74c3c; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.profile-controllers input[type="button"]:hover {
+    background-color: #c0392b; 
+    transform: scale(1.05);
+}
+
+.profile-controllers input[type="button"]:active {
+    background-color: #a93226; 
+    transform: scale(1);
+}
+
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    .profile-content {
+        padding: 1.5rem;
+    }
+
+    #profile-info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #profile-info h2 {
+        font-size: 1.4rem;
+    }
+
+    #profile-info p {
+        font-size: 0.9rem;
+    }
+}
