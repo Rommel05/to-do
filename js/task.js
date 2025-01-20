@@ -146,14 +146,14 @@ function toolbox() {
     })
 
     tippy('#profile', {
-        content: 'Profile user',
+        content: 'Profile',
         arrow: true,
-        placement: 'right',
+        placement: 'left',
         appendTo: document.body
     })
 
     tippy('#logout', {
-        content: 'Profile user',
+        content: 'Logout',
         arrow: true,
         placement: 'right',
         appendTo: document.body

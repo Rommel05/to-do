@@ -35,7 +35,7 @@
     ?>
     <div id="main-layout">
         <header id="header1">
-            <h1>Your tasks</h1>
+            <h1>YOUR TASKS</h1>
         </header>
         <main>
             <form method="get" id="form">
@@ -43,11 +43,13 @@
                 <div id="contenedor-fecha">
                     <input type="text" name="date" id="fecha" readonly="readonly">
                 </div>
-                <input type="button" name="add" id="add" value="Add task">
-                <input type="button" name="remove" id="remove" value="Delete task">
-                <input type="button" name="seleccionarTodas" id="seleccionarTodas" value="Select all tasks">
-                <a href="profile.php"><input type="button" name="profile" id="profile", value="profile"></a>
-                <a href="src/logout.php"><input type="button" name="logout" id="logout", value="logout"></a>
+                <input type="button" name="add" id="add" value="ADD TASK">
+                <input type="button" name="remove" id="remove" value="DELETE TASK">
+                <input type="button" name="seleccionarTodas" id="seleccionarTodas" value="SELECT ALL TASKS">
+                <div id="controlers">
+                    <a href="profile.php"><input type="button" name="profile" id="profile", value="PROFILE"></a>
+                    <a href="src/logout.php"><input type="button" name="logout" id="logout", value="LOGOUT"></a>
+                </div>
             </form>
         </main>
 
