@@ -120,21 +120,43 @@ function toolbox() {
     tippy('#add', {
         content: 'Add task',
         arrow: true,
+        placement: 'right',
+        appendTo: document.body
     })
 
     tippy('#remove', {
         content: 'Remove task',
         arrow: true,
+        placement: 'right',
+        appendTo: document.body
     })
 
     tippy('#seleccionarTodas', {
         content: 'Select all tasks',
         arrow: true,
+        placement: 'right',
+        appendTo: document.body
     })
 
     tippy('#cambiarTema', {
         content: 'Change theme',
         arrow: true,
+        //placement: 'right',
+        //appendTo: document.body
+    })
+
+    tippy('#profile', {
+        content: 'Profile user',
+        arrow: true,
+        placement: 'right',
+        appendTo: document.body
+    })
+
+    tippy('#logout', {
+        content: 'Profile user',
+        arrow: true,
+        placement: 'right',
+        appendTo: document.body
     })
 }
 

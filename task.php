@@ -47,7 +47,7 @@
                 <input type="button" name="remove" id="remove" value="Delete task">
                 <input type="button" name="seleccionarTodas" id="seleccionarTodas" value="Select all tasks">
                 <a href="profile.php"><input type="button" name="profile" id="profile", value="profile"></a>
-                <a href="src/logout.php"><input type="button" name="profile" id="profile", value="logout"></a>
+                <a href="src/logout.php"><input type="button" name="logout" id="logout", value="logout"></a>
             </form>
         </main>
 
