@@ -103,18 +103,36 @@ function changeTheme() {
         let theme = $('#cambiarTema').attr('src');
 
         if (theme == 'img/moon.png') {
-            $('body').animate({
-                backgroundColor: '#555',
-            })
+            $('body').dark();
             $('#cambiarTema').attr('src', 'img/light.png');
         } else {
-            $('body').animate({
-                backgroundColor: 'white',
-            })
+            $('body').light();
             $('#cambiarTema').attr('src', 'img/moon.png');
         }
     });
 }
+
+jQuery.fn.dark = function() {
+    this.each(function() {
+        let elem = $(this);
+        elem.animate({
+            backgroundColor: '#555',
+        });
+    })
+
+    return this
+};
+
+jQuery.fn.light = function() {
+    this.each(function() {
+        let elem = $(this);
+        elem.animate({
+            backgroundColor: 'white',
+        });
+    })
+
+    return this
+};
 
 function toolbox() {
     tippy('#add', {
@@ -159,20 +177,3 @@ function toolbox() {
         appendTo: document.body
     })
 }
-
-/*function tasks() { 
-    document.getElementById('task_list').addEventListener('click', function () {
-        var xhr = new XMLHttpRequest(); 
-
-        xhr.open('GET', 'php/conn.php', true);
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                
-                document.getElementById('tasks').innerHTML = xhr.responseText;
-            }
-        };
-
-        xhr.send();
-    });
-}*/

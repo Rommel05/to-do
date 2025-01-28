@@ -1,7 +1,7 @@
 <?php
     session_start();
-    //$conn = mysqli_connect('localhost','rommel','sa','todo');
-    $conn = mysqli_connect('localhost','root','sa','ToDo');
+    $conn = mysqli_connect('localhost','rommel','sa','todo');
+    //$conn = mysqli_connect('localhost','root','sa','ToDo');
     mysqli_query($conn,"SET NAMES 'utf8'");
 
 

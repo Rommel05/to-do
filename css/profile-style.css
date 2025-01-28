@@ -1,153 +1,104 @@
-/* Reset de márgenes y paddings */
+/* profile-style.css */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Fondo y fuente generales */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #444;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estructura principal */
-.main-layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Encabezado */
-.header {
-    /*background-color: #fff;*/
-    /*order-bottom: 1px solid #ddd;*/
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #222;
-}
-
-/* Contenido principal */
-.main-content {
-    flex: 1;
+    background-color: #ffffff;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    flex-direction: column;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Contenedor del perfil */
-.profile-content {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    padding: 2rem;
+.main-layout {
+    width: 90%;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: #000000;
+    color: #ffffff;
     text-align: center;
-    /*transition: transform 0.3s ease;*/
+    padding: 20px;
 }
 
-/*.profile-content:hover {
-    transform: scale(1.02);
-}*/
+.header h1 {
+    font-size: 1.8rem;
+}
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
 
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
 
-/* Imagen del perfil */
+#profile-info h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
 #profile-info img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    /*border: 3px solid #3b3b3b;*/
-    margin-bottom: 1rem;
     object-fit: cover;
+    border: 3px solid #000000;
+    
 }
 
 #profile-info img:hover {
-    transform: scale(1.1);
-}
-
-
-
-
-/* Información del perfil */
-#profile-info h2 {
-    font-size: 1.6rem;
-    color: #333;
-    margin-bottom: 0.5rem;
+    transform: scale(1.06);
 }
 
 #profile-info p {
     font-size: 1rem;
-    color: #666;
-    margin-bottom: 0.8rem;
-    word-wrap: break-word;
+    color: #333333;
+    line-height: 1.5;
 }
 
-#profile-info p:last-of-type {
-    font-size: 0.9rem;
-    color: #888;
-    /*font-style: italic;*/
-}
-
-/* Controladores del perfil */
 .profile-controllers {
-    margin-top: 1.5rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .profile-controllers input[type="button"] {
-    background-color: #e74c3c; 
-    color: #fff;
+    background: #000000;
+    color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
+    font-size: 1rem;
+    transition: background 0.3s ease;
 }
 
 .profile-controllers input[type="button"]:hover {
-    background-color: #c0392b; 
-    transform: scale(1.05);
+    background: #333333;
 }
 
-.profile-controllers input[type="button"]:active {
-    background-color: #a93226; 
-    transform: scale(1);
-}
-
-
-/* Adaptabilidad */
-@media (max-width: 768px) {
-    .profile-content {
-        padding: 1.5rem;
-    }
-
-    #profile-info img {
-        width: 100px;
-        height: 100px;
-    }
-
-    #profile-info h2 {
-        font-size: 1.4rem;
-    }
-
-    #profile-info p {
-        font-size: 0.9rem;
-    }
+#id img {
+    width: 6rem;
+    height: 10rem;
 }

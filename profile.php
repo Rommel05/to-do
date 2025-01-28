@@ -35,11 +35,12 @@
         </div>
     </div>
 
+    
     <script>
         const xhr = new XMLHttpRequest();
 
         let id = "<?php echo $id; ?>";
-        console.log(id);
+        //console.log(id);
 
         //xhr.open("GET", "src/showProfile.php?id=" + id);
         xhr.open("POST", "src/showProfile.php");
@@ -49,7 +50,7 @@
                 let contenedor = document.getElementById('profile-info');
                 let content = xhr.responseText;
                 contenedor.innerHTML = content;
-                console.log(content);
+                //console.log(content);
             }
         })
         xhr.send('id=' + id);
@@ -66,7 +67,6 @@
             })
             xhr.send('id=' + id);
         })
-
     </script>
 </body>
 </html>
